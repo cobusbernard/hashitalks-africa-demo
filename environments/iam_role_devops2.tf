@@ -1,4 +1,6 @@
 # Allow IAM users from the main account to access this role
+
+# This temporary deveops2 role
 resource "aws_iam_role" "developers" {
   name = "devops2"
 
