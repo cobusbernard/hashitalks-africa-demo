@@ -14,11 +14,11 @@ else
 endif
 
 TERRAFORM:= $(shell command -v terraform 2> /dev/null)
-TERRAFORM_VERSION:= "0.12.24"
+TERRAFORM_VERSION:= "1.0.7"
 
 ifeq ($(OS_X),true)
 		TERRAFORM_MD5:= $(shell md5 -q `which terraform`)
-		TERRAFORM_REQUIRED_MD5:= 1188a85a63146493fb34b46632e2c7e6
+		TERRAFORM_REQUIRED_MD5:= 79f9c97e6898ccc348e745ed5cb9f8d8
 else
 		TERRAFORM_MD5:= $(shell md5sum - < `which terraform` | tr -d ' -')
 		TERRAFORM_REQUIRED_MD5:= f91834c3ac0f78c77914498765d3e0b7
