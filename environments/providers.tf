@@ -5,6 +5,6 @@ provider "aws" {
   # shared_credentials_file = "/home/ubuntu/.aws/credentials_hashitalks"
 
   assume_role {
-    role_arn = "arn:aws:iam::${var.aws_account_id}:role/devops2"
+    role_arn = "arn:aws:iam::${var.aws_account_id}:role/admin"
   }
 }
