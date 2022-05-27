@@ -23,3 +23,11 @@ export AWS_SESSION_TOKEN=$(echo $aws_credentials|jq '.Credentials.SessionToken'|
 echo "Using $nameOfMyrole Role"
 aws sts get-caller-identity
 ```
+
+Unset above variables
+```
+unset AWS_ACCESS_KEY_ID AWS_SECRET_ACCESS_KEY AWS_SESSION_TOKEN
+echo $AWS_ACCESS_KEY_ID $AWS_SECRET_ACCESS_KEY
+echo "Using $AWS_PROFILE user"
+aws sts get-caller-identity
+```
